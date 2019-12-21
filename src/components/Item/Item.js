@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './Item.module.css'
 import * as axios from 'axios';
 import Slider from '../Slider'
+import { NavLink } from "react-router-dom";
 
 const Item = (props) => {
 
@@ -20,11 +21,12 @@ const Item = (props) => {
 
     return (
         <div className={styles.item}>
+            <NavLink to={'/'}>Назад</NavLink>
             <div className={styles.titleAndPrice}>
                 <div className={styles.title}>{item.title}</div>
                 <div className={styles.price}>{item.price}</div>
             </div>
-            <Slider images={images}/>
+            <Slider images={images} />
             <div><b>Адрес:</b> {item.address}</div>
             <div><b>Продавец:</b> {item.sellerName}</div>
             <div>{item.description}</div>
