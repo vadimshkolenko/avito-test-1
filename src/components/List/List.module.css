@@ -1,0 +1,62 @@
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #369cf1;
+}
+
+.items {
+    margin: 0 auto;
+    width: 430px;
+}
+
+.item {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.item img {
+    width: 210px;
+}
+
+.item .information {
+    padding-left: 15px;
+    width: 200px;
+}
+
+.title {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.address {
+    font-size: 13px;
+}
+
+/* media queries */
+
+@media screen and (min-width: 0) and (max-width: 414px) {
+    .items {
+        width: 270px;
+    }
+
+    .item img {
+        width: 270px;
+    }
+
+    .item .information {
+        padding-left: 0;
+    }
+}

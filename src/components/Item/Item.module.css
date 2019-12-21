@@ -1,0 +1,46 @@
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.item {
+    margin: 0 auto;
+    width: 50%;
+    max-width: 900px;
+}
+
+div {
+    padding: 5px 0;
+}
+
+.titleAndPrice {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.price {
+    font-size: 29px;
+    font-weight: 500;
+}
+
+/* media queries */
+
+@media screen and (min-width: 0) and (max-width: 650px) {
+    .item {
+        width: 90%;
+    }
+
+    .title {
+        font-size: 29px;
+    }
+
+    .price {
+        font-size: 26px;
+    }
+}
