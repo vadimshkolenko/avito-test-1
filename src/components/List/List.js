@@ -6,17 +6,20 @@ import { NavLink } from "react-router-dom";
 const List = () => {
 
     const [items, setItems] = useState([])
+    const [isLoaded, setLoaded] = useState(false)
 
     useEffect(() => {
         axios.get('http://134.209.138.34/items')
             .then(response => {
                 setItems(response.data)
+                setLoaded(true)
             })
     })
 
     return (
         <div className={styles.items}>
             {
+                isLoaded ?
                 items.map(item =>
                     <div className={styles.item} key={item.id}>
                         <NavLink to={`/item/` + item.id} params={{ itemId: item.id }}>
@@ -30,7 +33,7 @@ const List = () => {
                             <div className={styles.address}>{item.address}</div>
                         </div>
                     </div>
-                )
+                ) : <div>Загрузка...</div>
             }
         </div>
     )
